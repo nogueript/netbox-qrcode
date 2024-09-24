@@ -120,5 +120,10 @@ class PowerPanelQRCode(QRCode):
     def right_page(self):
         return self.x_page()    
 
+class Plugin_Netbox_Inventory(QRCode):
+    model = 'netbox_inventory.asset'
 
-template_extensions = [DeviceQRCode, RackQRCode, CableQRCode, LocationQRCode, PowerFeedQRCode, PowerPanelQRCode]
+    def right_page(self):
+        return self.x_page()
+
+template_extensions = [DeviceQRCode, RackQRCode, CableQRCode, LocationQRCode, PowerFeedQRCode, PowerPanelQRCode, Plugin_Netbox_Inventory]
