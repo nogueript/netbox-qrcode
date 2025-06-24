@@ -166,7 +166,7 @@ class ModuleQRCode(QRCode):
 # Commenting out (for now) - make this work on core models first.
 # Class for creating a QR code for the Plugin: Netbox-Inventory (https://github.com/ArnesSI/netbox-inventory)
 class Plugin_Netbox_Inventory(QRCode):
-    models = ()'netbox_inventory.asset' # Info for Netbox in which model the plugin should be integrated.
+    models = ('netbox_inventory.asset',) # Info for Netbox in which model the plugin should be integrated.
 
     def right_page(self):
         return self.Create_PluginContent()
